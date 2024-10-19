@@ -1,0 +1,23 @@
+# Database configuration
+spring:
+  datasource:
+    url: jdbc:mysql://mysql-10b89816-jattavi04-f935.b.aivencloud.com:20284/defaultdb
+    username: avnadmin
+    password: AVNS_CUd22KMkI24gmDWa3DI
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create # Use 'update' for incremental changes
+      dialect: org.hibernate.dialect.MySQL8Dialect # Ensure this is set correctly
+    generate-ddl: true
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
