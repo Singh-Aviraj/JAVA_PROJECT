@@ -8,7 +8,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: create # Use 'update' for incremental changes
+      ddl-auto: update # Use 'update' for incremental changes
       dialect: org.hibernate.dialect.MySQL8Dialect # Ensure this is set correctly
     generate-ddl: true
     show-sql: true
